@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DVFORM</title>
+</head>
+<body>
+<a href="index.html" style="background-color:khaki;font-size: large" >INDEX</a>
+<form  onsubmit="return validation()">
+    <label for="uname">Username:</label>
+    <input type="text" name="uname" id="un"><br><br>
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="ei"><br><br>
+    <label for="pnumber">Phone Number:</label>
+    <input type="text" name="pnumber" id="phno"><br><br>
+    <label for="password">Enter Password:</label>
+    <input type="password" name="password" id="pw"><br><br>
+    <label for="confirmpw">Confirm Password:</label>
+    <input type="password" name="confirmpw" id="cpw"><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="female" id="fe">
+    <label>Female</label>
+
+    <input type="radio" name="gender" value="male" id="ma">
+    <label>Male</label>
+
+    <input type="radio" name="gender" value="other" id="og">
+    <label>Other</label><br><br>
+    <label>Birth Day</label>
+    <select id="month">
+        <option value=""></option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>Sepember</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+    </select>
+    <select id="day">
+        <option value=""></option>
+    </select>
+    <select id="year">
+        <option value=""></option>
+    </select><br><br>
+
+       <label>Favorite Music Genre:</label>
+    <input type="checkbox" name="Pop" id="pop">
+    <label for="pop">Pop</label>
+    <input type="checkbox" name="Hiphop" id="hiphop">
+    <label for="hiphop">Hiphop</label>
+    <input type="checkbox" name="Jazz" id="jazz">
+    <label  for="jazz">Jazz</label>
+    <input type="checkbox" name="Rock" id="rock">
+    <label for="rock">Rock</label>
+    <input type="checkbox" name="Classical Music" id="cm">
+    <label for="cm">Classical music</label>
+    <input type="checkbox" name="Country" id="country">
+    <label for="country">Country</label><br><br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Clear</button>
+</form>
+
+<p id="wrongusername"></p>
+<p id="wrongemail"></p>
+<p id="wrongnumber"></p>
+<p id="wrongpassword"></p>
+<p id="wrongcfmpassword"></p>
+<p id="wronggender"></p>
+<p id="wrongbirthday"></p>
+
+</body>
+
+<script src="form.js"></script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DVD3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+<a href="index.html" style="background-color:khaki;font-size: large" >INDEX</a>
+</body>
+<script>
+let attribute1=d3.select("body");
+let attribute2=attribute1.append("span").attr("width","1000").attr("height","1000");
+let attribute3=attribute1.append("div");
+let div1=attribute3.append("div").style("width","35%").style("float","left");
+let div2=attribute3.append("div").style("width","35%").style("float","left");
+let div3=attribute3.append("div").style("width","35%").style("float","left");
+let div4=attribute3.append("div").style("width","35%").style("float","right");
+let div5=attribute3.append("div").style("width","35%").style("float","right");
+let svg = div3.append('svg');
+svg.attr("width","300").style("float","left").style("background","black").style("height","300").on('mousemove',(event)=>{
+
+let element1=d3.pointer(event)[0];
+let element2=d3.pointer(event)[1];
+
+div4.text(element1).style("font","initial");
+
+div5.text(element2).style("font","initial");
+})
+
+let value=attribute2.append("val");
+var mousedownFired = false;
+
+let facebookin="In:facebook";
+let facebookout="Out:facebook"
+let image=value.append("img").attr("src","fb.png").attr("width","100").attr("height","100").style("margin-right","3px").style("cursor","pointer")
+.on("mouseover",()=>{
+div1.text(facebookin).attr("element1","250").attr("element2","250");
+}).on("click",()=>{
+mousedownFired=false;
+value.attr("href","https://www.facebook.com/");
+
+    }).on("mouseleave",()=>{
+        div2.text(facebookout).attr("element1","250").attr("element2","250");
+    })
+    .on("mouseup",()=>{
+        image.style("background","red");
+    }).on("mousedown",()=>{
+        image.style("background","green");
+    });
+
+let instagramin="In:instagram";
+let instagramout="Out:instagram"
+let image2=value.append("img").attr("src","instagram.png").attr("width","100").attr("height","100").style("margin-right","3px").style("cursor","pointer")
+.on("mouseover",()=>{
+div1.text(instagramin).attr("element1","250").attr("element2","250");
+}).on("click",()=>{
+value.attr("href","https://www.instagram.com/");
+    }).on("mouseleave",()=>{
+        div2.text(instagramout).attr("element1","250").attr("element2","250");
+    }).on("mouseup",()=>{
+        image2.style("background","red");
+    }).on("mousedown",()=>{
+        image2.style("background","green");
+    });
+
+let twitterin="In:twitter"
+let twitterout="Out:twitter"
+let image3= value.append("img").attr("src","twitter4.png").attr("width","100").attr("height","100").style("margin-right","3px").style("cursor","pointer")
+    .on("mouseover",()=>{
+        div1.text(twitterin).attr("element1","250").attr("element2","250");
+    }).on("click",()=>{
+        value.attr("href","https://www.twitter.com/");
+
+    }).on("mouseleave",()=>{
+        div2.text(twitterout).attr("element1","250").attr("element2","250");
+    }).on("mouseup",()=>{
+        image3.style("background","red");
+    }).on("mousedown",()=>{
+        image3.style("background","green");
+    });
+
+let linkedinin="In:linkedin"
+let linkedinout="Out:linkedin"
+let image4= value.append("img").attr("src","lnk.png").attr("width","100").attr("height","100").style("margin-right","3px").style("cursor","pointer")
+    .on("mouseover",()=>{
+        div1.text(linkedinin).attr("element1","250").attr("element2","250");
+    }).on("click",()=>{
+        value.attr("href","https://www.LinkedIn.com/");
+
+    }).on("mouseleave",()=>{
+        div2.text(linkedinout).attr("element1","250").attr("element2","250");
+    }).on("mouseup",()=>{
+        image4.style("background","red");
+    }).on("mousedown",()=>{
+        image4.style("background","green");
+    });
+
+let redditin="In:reddit"
+let redditout="Out:reddit"
+let image5=value.append("img").attr("src","Reddit.png").attr("width","100").attr("height","100").style("margin-right","3px").style("cursor","pointer")
+    .on("mouseover",()=>{
+        div1.text(redditin).attr("element1","250").attr("element2","250");
+    }).on("click",()=>{
+        value.attr("href","https://www.reddit.com/");
+
+    }).on("mouseleave",()=>{
+        div2.text(redditout).attr("element1","250").attr("element2","250");
+    }).on("mouseup",()=>{
+        image5.style("background","red");
+    }).on("mousedown",()=>{
+        image5.style("background","green");
+    });
+
+</script>
+
+</html>
